@@ -50,11 +50,11 @@ scripts_check
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Defaults
 APPNAME="${APPNAME:-template}"
-APPDIR="${APPDIR:-$HOME/.config/$APPNAME}"
-INSTDIR="${INSTDIR}"
+APPDIR="$HOME/.config/$APPNAME"
+INSTDIR="$HOME/.local/share/CasjaysDev/dfmgr/$APPNAME"
 REPO="${DFMGRREPO:-https://github.com/dfmgr/$APPNAME}"
-REPORAW="${REPORAW:-$REPO/raw}"
-APPVERSION="$(__appversion "$REPORAW/master/version.txt")"
+REPORAW="${REPORAW:-$REPO/raw/$GIT_REPO_BRANCH}"
+APPVERSION="$(__appversion "$REPORAW/version.txt")"
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Setup plugins
 PLUGNAMES=""
